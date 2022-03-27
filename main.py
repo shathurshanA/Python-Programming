@@ -1,9 +1,4 @@
-name = "jack"
-print(name)
+#DATA TYPES
+#STRINGS
 
-name = "shathurshan"
-print(name)
-
-name = input("what is your name ?")
-length = len(name)
-print(length)
+print("Hello"[0])
