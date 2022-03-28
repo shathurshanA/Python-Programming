@@ -1,10 +1,11 @@
-height = input("enter your height in m: ")
-weight = input("enter your weight in kg: ")
+age = input("What is your current age? ")
 
-w_int = int(weight)
-h_float= float(height)
+age_int = int(age)
 
-bmi= w_int/h_float**2
-bmi_int = int(bmi)
+remaining_years = 90 - age_int
+days_remaining = remaining_years * 365
+weeks_remaining = remaining_years * 52
+months_remaining = remaining_years * 12
 
-print(bmi_int)
+print(f"You have {days_remaining} days, {weeks_remaining} weeks, and {months_remaining} months left.")
+
