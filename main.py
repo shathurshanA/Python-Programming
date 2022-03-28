@@ -1,11 +1,10 @@
-# 🚨 Don't change the code below 👇
-two_digit_number = input("Type a two digit number: ")
-# 🚨 Don't change the code above 👆
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
 
-####################################
-#Write your code below this line 👇
-first_digit= two_digit_number[0]
-second_digit = two_digit_number[1]
+w_int = int(weight)
+h_float= float(height)
 
-num = int(first_digit) + int(second_digit)
-print(num)
+bmi= w_int/h_float**2
+bmi_int = int(bmi)
+
+print(bmi_int)
