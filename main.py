@@ -1,54 +1,17 @@
-import random
+student_heights = input("Input a list of student heights: ").split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
 
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+total_height = 0
+for height in student_heights:
+    total_height +=height
+print(total_height)
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
-
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
-
-#Write your code below this line 👇
-game_images=[rock, paper, scissors]
-user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, 2 for Scissors.\n"))
-print(game_images[user_choice])
+number_of_students = 0
+for students in student_heights:
+    number_of_students +=1
+print(number_of_students)
 
 
-computer_choice = random.randint(0,2)
-print(f"Computer chose:")
-print(game_images[computer_choice])
-
-if user_choice>=3 or user_choice<0:
-    print("You typed an invalid number, you lose!")
-elif computer_choice==0 and user_choice==2:
-    print("You Lose!")
-elif computer_choice == 2 and user_choice == 0:
-    print("You Win!")
-elif computer_choice > user_choice:
-    print("You lose!")
-elif user_choice > computer_choice:
-    print("You Win!")
-elif computer_choice==user_choice:
-    print("Its a draw!")
-else:
-    print("You typed an invalid number, YOu lose!")
-
+average_height = round(total_height / number_of_students)
+print(average_height)
