@@ -1,17 +1,29 @@
-# Write your code below this line 👇
+student_scores = {
+    "Harry": 81,
+    "Ron": 78,
+    "Hermione": 99,
+    "Draco": 74,
+    "Neville": 62,
+}
+# 🚨 Don't change the code above 👆
 
-def prime_checker(number):
-    is_prime= True
-    for i in range(2, number):
-        if number % i == 0:
-            is_prime = False
-        if is_prime:
-            print(" Its a Prime Number. ")
-        else:
-            print("Its not a prime number. ")
+# TODO-1: Create an empty dictionary called student_grades.
+student_grades = {}
 
-# Write your code above this line 👆
+for student in student_scores:
+    score = student_scores[student]
+    if score > 90:
+        student_grades[student] = "Outstanding"
+    elif score > 80:
+        student_grades[student] = "Exceeds Expectation"
+    elif score > 70:
+        student_grades[student] = "Acceptable"
+    else:
+        student_grades[student] = "Fail"
 
-# Do NOT change any of the code below👇
-n = int(input("Check this number: "))
-prime_checker(number=n)
+
+# TODO-2: Write your code below to add the grades to student_grades.👇
+
+
+# 🚨 Don't change the code below 👇
+print(student_grades)
