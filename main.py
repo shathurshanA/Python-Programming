@@ -1,32 +1,41 @@
-travel_log = [
-{
-  "country": "France",
-  "visits": 12,
-  "cities": ["Paris", "Lille", "Dijon"]
-},
-{
-  "country": "Germany",
-  "visits": 5,
-  "cities": ["Berlin", "Hamburg", "Stuttgart"]
-},
-]
-#🚨 Do NOT change the code above
+def is_leap(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
 
-#TODO: Write the function that will allow new countries
-#to be added to the travel_log. 👇
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
 
-def add_new_country(country_visited, times_visited, cities_visited):
-  new_country = {}
-  new_country["country"] = country_visited
-  new_country["visits"] = times_visited
-  new_country["cities"] = cities_visited
-  travel_log.append(new_country)
+
+def days_in_month(year, month):
+
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if is_leap(year) and month == 2:
+        return 29
+    return month_days[month - 1]
 
 
 
-#🚨 Do not change the code below
-add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
-print(travel_log)
+# 🚨 Do NOT change any of the code below
+year = int(input("Enter a year: "))
+month = int(input("Enter a month: "))
+days = days_in_month(year, month)
+print(days)
+
+
+
+
+
+
+
+
+
+
 
 
 
