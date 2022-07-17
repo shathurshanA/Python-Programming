@@ -1,10 +1,14 @@
-for number in range(1, 101):
-  print(f"Currently on number {number}")
-  if number % 3 == 0 and number % 5 == 0:
-    print("FizzBuzz")
-  elif number % 3 == 0:
-    print("Fizz")
-  elif number % 5 == 0:
-    print("Buzz")
-  else:
-    print(number)
+#import another_module
+
+#print(another_module.another_variable)
+#
+
+from turtle import Turtle, Screen
+timmy = Turtle()
+print(timmy)
+timmy.shape("turtle")
+timmy.color("coral")
+
+my_screen= Screen()
+print(my_screen.canvheight)
+my_screen.exitonclick()
