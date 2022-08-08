@@ -1,14 +1,12 @@
-#import another_module
+import colorgram
 
-#print(another_module.another_variable)
-#
+rgb_colors = []
+colors = colorgram.extract('image.jpg', 30)
+for color in colors:
+    r = color.rgb.r
+    g = color.rgb.g
+    b = color.rgb.b
+    new_color = (r, g, b)
+    rgb_colors.append(new_color)
 
-from turtle import Turtle, Screen
-timmy = Turtle()
-print(timmy)
-timmy.shape("turtle")
-timmy.color("coral")
-
-my_screen= Screen()
-print(my_screen.canvheight)
-my_screen.exitonclick()
+print(rgb_colors)
